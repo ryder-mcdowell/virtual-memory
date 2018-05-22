@@ -5,13 +5,14 @@ void setup() {
   Serial.println("Begin\n");
   VM vm;
 
-  vm[100] = 200;
-  vm[200] = 400;
-  vm[300] = 600;
-  vm[400] = 800;
-  vm[500] = 1000;
-  Serial.println(vm[100]);
-  vm[600] = 1200;
+  vm[100] = '&';
+  vm[200] = '!';
+  vm[300] = '@';
+  vm[400] = '#';
+  vm[500] = '$';
+  Serial.println((char) vm[100]);
+  Serial.println((char) vm[200]);
+  Serial.println((char) vm[300]);
 
 //  vm[7978] = 100;
 //  Serial.println("------------------------------------------");

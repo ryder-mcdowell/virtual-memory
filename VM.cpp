@@ -61,9 +61,9 @@ int VM::loadPage(unsigned long page) {
       return i;
     }
   }
-  Serial.print("$ ");Serial.print("Kicking out page ");Serial.println(victim_index);
+  Serial.print("$ ");Serial.print("Kicking out page ");Serial.println(page_table[victim_index]);
   //if no vacant spots, kick one out
-  sram.write_page(victim_index, &physical_memory[victim_index * PAGE_SIZE]);
+  sram.write_page(page_table[victim_index], &physical_memory[victim_index * PAGE_SIZE]);
   page_table[victim_index] = page;
   sram.read_page(page, &physical_memory[victim_index * PAGE_SIZE]);
   
