@@ -1,27 +1,32 @@
 #include "VM.h"
 
+
 void setup() {
   Serial.begin(115200);
-  Serial.println("Begin\n");
   VM vm;
 
-  vm[100] = '&';
-  vm[200] = '!';
-  vm[300] = '@';
-  vm[400] = '#';
-  vm[500] = '$';
-  Serial.println((char) vm[100]);
-  Serial.println((char) vm[200]);
-  Serial.println((char) vm[300]);
+  int array_one[50000];
+  int array_two[50000];
 
-//  vm[7978] = 100;
-//  Serial.println("------------------------------------------");
-//  vm[127937] = 100;
-//  Serial.println("------------------------------------------");
-//  vm[39847] = vm[7978] + vm[127937];
-//  Serial.println("------------------------------------------");
+  int tmp = array_one[0] + array_two[0];
+  
+
+//  vm[2749] = 0xAB;
+//  vm[963] = 0xCD;
+//  vm[129775] = 0xEF;
+//  vm[71066] = 0x01;
+
+//  char *msg = "Hello from Virtual Memory!!!";
 //  
-//  Serial.print(vm[7978]);Serial.print(" + ");Serial.print(vm[127937]);Serial.print(" = ");Serial.println(vm[39847]);
+//  for (int i = 0; i < strlen(msg); i++) {
+//    vm[i*32] = msg[i];
+//  }
+//
+//  for (int i = 0; i < strlen(msg); i++) {
+//    Serial << (char) vm[i*32];
+//  }
+//  
+//  Serial << endl;
 }
 
 void loop() {
